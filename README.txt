@@ -1,0 +1,1 @@
+There are two steps corresponding to the eponymous directories, "image_processing" and "solve distributions." Each can be run by following the instructions in the README in the directory. The solve distribution step can also be run without running the image processing first, by using the precomputed input artifacts already in the repository. 

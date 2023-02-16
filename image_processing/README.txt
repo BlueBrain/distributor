@@ -1,0 +1,11 @@
+To run the pipeline, follow these steps:
+
+1. Download images. Download high resolution images for the slice in the regions of interest. Put ISH coronal images in the directory "images_coronal." ISH sagittal images should go in "images_sagittal." Nissl images should go in "images_sagittal_nissl." The naming convention is "gene_name.experiment_number.jpg"
+
+2. Annotate the region of interest. For the coronal ISH slices, this is "mark_cortex_coronal" It reads through the coronal images and the user mars the rhomboidal region of interest in this order: upper (left top of leyer 1 left), upper right (top of layer 1 right), lower right (bottom of layer 6 right), lower left (bottom of layer 6 left). The annotation four points are stored in the directory "annotate_coronal left." The program then proceeds to the next image until all are done. As an optional step the bottom of layer 4 can be annotated using the program "mark_cortex_L4_coronal." For the layer 4 marking, only two points need to be annotated in this order per slice: left bottom of layer 4 and right bottom of layer 4. For the sagittal ISH images, annotate using "mark_cortex_sagittal" and (optinally) "mark_cortex_L4_sagittal." Finally, Nissl sagittal images can be annotated using "mark_cortex_nissl." 
+
+3. Run the image processing. For coronal slices, this is "annotate_translate_coronal61." For sagittal slices, this is "annotate_translate_sagittal61." For Nissl images, this is "annotate_translate_sagittal_nissl61." All functions take as input the starting number of the slice in the order of the directory listing. If you want to start at the first one, use "1" as the input. 
+
+4. Now combine and consolidate the images by running "collect_vectors_manual61" This combines genes from multiple experiments and computes the cv. Results are stored in "vectors_collected_manual61."
+
+5. Make the final output excel file by running "make_expression_xls1." This produces the final excel file "expression_profiles_combined.xls" which should be copied to the "solve_distributions" directory as input to the distribution calculations.
