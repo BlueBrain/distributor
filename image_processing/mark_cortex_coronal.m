@@ -4,7 +4,7 @@
 
   clear
   newdirlist=[];
-
+  mkdir('annotate_coronal_left')
   dirlist=dir ('./images_coronal/*.jpg');
   %loop through all the text files in the directory
   
