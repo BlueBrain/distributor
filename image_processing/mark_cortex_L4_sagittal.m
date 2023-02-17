@@ -4,7 +4,7 @@
 
 clear
 newdirlist=[];
-
+mkdir('annotate_sagittal_L4')
 dirlist=dir ('annotate_sagittal/annotate_*.dat');
 %loop through all the text files in the directory
 
