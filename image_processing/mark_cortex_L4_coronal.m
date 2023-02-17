@@ -5,6 +5,7 @@
 clear
 newdirlist=[];
 
+mkdir('annotate_coronal')
 dirlist=dir ('annotate_coronal/annotate_*.dat');
 %loop through all the text files in the directory
 
