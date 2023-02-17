@@ -4,7 +4,7 @@
 
   clear
   newdirlist=[];
-
+  mkdir('annotate_sagittal_nissl')
   dirlist=dir ('./images_sagittal_nissl/*.jpg');
   %loop through all the text files in the directory
   
